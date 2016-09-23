@@ -10,6 +10,9 @@
 		335995F91D946C8700075E69 /* ScrollingGameEngineBuilderLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335995EF1D946C8700075E69 /* ScrollingGameEngineBuilderLogic.framework */; };
 		335995FE1D946C8700075E69 /* ScrollingGameEngineBuilderLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335995FD1D946C8700075E69 /* ScrollingGameEngineBuilderLogicTests.swift */; };
 		335996001D946C8700075E69 /* ScrollingGameEngineBuilderLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 335995F21D946C8700075E69 /* ScrollingGameEngineBuilderLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3359960A1D946CCC00075E69 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335996091D946CCC00075E69 /* Game.swift */; };
+		3359960C1D946DC100075E69 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359960B1D946DC100075E69 /* Entity.swift */; };
+		335996101D94727E00075E69 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359960F1D94727E00075E69 /* Level.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		335995F81D946C8700075E69 /* ScrollingGameEngineBuilderLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollingGameEngineBuilderLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		335995FD1D946C8700075E69 /* ScrollingGameEngineBuilderLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingGameEngineBuilderLogicTests.swift; sourceTree = "<group>"; };
 		335995FF1D946C8700075E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		335996091D946CCC00075E69 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3359960B1D946DC100075E69 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		3359960F1D94727E00075E69 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				335995F21D946C8700075E69 /* ScrollingGameEngineBuilderLogic.h */,
 				335995F31D946C8700075E69 /* Info.plist */,
+				335996091D946CCC00075E69 /* Game.swift */,
+				3359960B1D946DC100075E69 /* Entity.swift */,
+				3359960F1D94727E00075E69 /* Level.swift */,
 			);
 			path = ScrollingGameEngineBuilderLogic;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					335995EE1D946C8700075E69 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					335995F71D946C8700075E69 = {
@@ -196,6 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335996101D94727E00075E69 /* Level.swift in Sources */,
+				3359960C1D946DC100075E69 /* Entity.swift in Sources */,
+				3359960A1D946CCC00075E69 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +333,7 @@
 		335996041D946C8700075E69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsampdev.ScrollingGameEngineBuilderLogic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +353,7 @@
 		335996051D946C8700075E69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +372,7 @@
 		335996071D946C8700075E69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ScrollingGameEngineBuilderLogicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsampdev.ScrollingGameEngineBuilderLogicTests;
@@ -367,6 +384,7 @@
 		335996081D946C8700075E69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ScrollingGameEngineBuilderLogicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsampdev.ScrollingGameEngineBuilderLogicTests;
@@ -394,6 +412,7 @@
 				335996051D946C8700075E69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		335996061D946C8700075E69 /* Build configuration list for PBXNativeTarget "ScrollingGameEngineBuilderLogicTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +421,7 @@
 				335996081D946C8700075E69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
